@@ -1,0 +1,27 @@
+version: v1
+
+build:
+    tools:
+      node: 8.5.0
+      gcc:
+      make:
+      'gcc-c++':
+    deps:
+        - npm-install-g: yarn@0.17.10
+        - npm-install-g: pm2
+    run:
+        cmd:
+            - bin/pre-deploy.sh
+    target:
+        distDir: ./		# 相对代码根目录的路径
+        files:
+            - ./
+    cache:
+        dirs:
+            - ./node_modules    # cache 目录不能在代码目录中存在
+autodeploy:
+    targetDir: /opt/meituan/mall-pc/	# 暂时autodeploy会以targetDir的最后一级目录作为service/的名字
+    run: bin/post-deploy.sh
+    check: sh ./bin/check.sh
+    checkRetry: 2 # 默认值为1
+    checkInterval: 1s # 默认值1s

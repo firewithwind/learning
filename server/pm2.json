@@ -1,0 +1,29 @@
+{
+  "apps": [
+    {
+      "name": "mall.pc",
+      "script": "server/index.js",
+      "instances": 4,
+      "exec_mode": "cluster_mode",
+      "out_file": "/opt/logs/logs/pm2/mall-pc/out/out.log",
+      "error_file": "/opt/logs/logs/pm2/mall-pc/error/error.log",
+      "merge_logs": true,
+      "env": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "dev"
+      },
+      "env_production": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "production"
+      },
+      "env_staging": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "staging"
+      },
+      "env_test": {
+        "NODE_CONFIG_DIR": "./server/config",
+        "NODE_ENV": "test"
+      }
+    }
+  ]
+}

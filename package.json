@@ -1,0 +1,18 @@
+{
+  "name": "learnmagpie",
+  "version": "0.0.1",
+  "scripts": {
+    "init": "magpie init",
+    "dll": "magpie dll",
+    "dev": "magpie dev",
+    "build": "magpie build",
+    "node": "disableHLB=true magpie node",
+    "thrift": "magpie thrift"
+  },
+  "dependencies": {
+    "@lsfe/magpie": "^0.0.78",
+    "element-ui": "1.4.6",
+    "vue": "^2.5.3",
+    "vue-template-compiler": "^2.5.3"
+  }
+}
