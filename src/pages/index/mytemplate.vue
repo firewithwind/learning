@@ -20,11 +20,24 @@
                     </span>
               </transition-group>
             </div>
+            <div class="test3">
+                <button @click="showProps">show props</button>
+            </div>
         </div>
     </div>
 </template>
 <script>
 export default {
+    props: {
+        autoattr: {
+            type: Number,
+            default: 1
+        },
+        myref: {
+            type: String,
+            required: true
+        }
+    },
     data() {
         return {
             attr: '',
@@ -34,9 +47,11 @@ export default {
        }
     },
     created() {
-       console.log(this.$refs.tit)
     },
     methods: {
+        showProps: function() {
+            console.log(this.autoattr)
+        },
         randomIndex: function () {
           return Math.floor(Math.random() * this.items.length)
         },

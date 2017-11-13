@@ -103,12 +103,31 @@ computed: {
 ```
 4、列表过渡一般用transition-group,该标签在渲染时会产生一个真实的span元素,可以用tag属性来更改产生的标签类型。
 
+###Vue实例属性接口
 
+1.[$el]()
 
+2.[$props]()
 
+3.[$parent]()
 
+4.[$data]()
 
+5.[$options]()
 
+6.[$root]()
 
+7.[$children]()
 
+8.[$slots]()
+
+9.[$scopedSlots]()
+
+10.[$refs]()
+
+11.[$isServer]()
+
+12.[$attrs]()
+
+13.[$listeners]()
 

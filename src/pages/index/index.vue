@@ -4,7 +4,8 @@
             <a href="#">{{title}}</a>
             <a href="#">{{write}}</a>
         </div>
-        <mytemplate autoattr="1" ref="tit"></mytemplate>
+        <mytemplate :autoattr="1" myref="tit"></mytemplate>
+        <input type="text" v-focus>
     </div>
 </template>
 <script>
@@ -18,6 +19,13 @@ export default {
             msg: 'world',
             title: '简书',
             write: '写文章'
+        }
+    },
+    directives: {
+        focus: function(el, binding, vnode) {
+            console.log(el);
+            console.log(binding);
+            console.log(vnode);
         }
     }
 }
