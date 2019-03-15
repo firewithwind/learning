@@ -9,6 +9,7 @@
                 <button @click="test1=true">show</button>
                 <button @click="test1=false">hide</button>
                 <button @click="test1=false">hide</button>
+                <button @click="test1=false">hide</button>
             </div>
             <div class="test2">
                 <div>
